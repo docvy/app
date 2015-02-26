@@ -1,0 +1,13 @@
+language: node_js
+node_js:
+- '0.11'
+script: make releases
+deploy:
+  provider: releases
+  api_key:
+    secure: K8g8W6ztp87fwnU/S6My4KIA+gmCtFieYeiRrcqmZrcZfvtophaO2fRe5l7l35mpPFPpH5Bnjpd8vJkmn2eQF8q8TLmDXr+tBODH4+fp+XkDyfG2drUjTuqfOUA/1TwgViNOFZfKpnFcsGNzHHlAzXtZWefyg66X78f/Fpc10q8=
+  file: releases/*
+  on:
+    repo: GochoMugo/docvy-app
+after_deploy:
+  - ls releases/*

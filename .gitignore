@@ -1,0 +1,12 @@
+# ignore build directory
+build/
+
+# symbolic links in dev mode
+src/server
+src/viewer
+
+# nodewebkit builder cache
+cache/
+
+# npm-installed modules
+node_modules/

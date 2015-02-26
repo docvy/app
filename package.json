@@ -1,0 +1,7 @@
+{
+  "dependencies": {
+    "grunt": "latest",
+    "grunt-contrib-jshint": "latest",
+    "grunt-node-webkit-builder": "latest"
+  }
+}
