@@ -9,8 +9,9 @@ IF NOT "%1"=="" (
 GOTO :EOF
 
 :releases
-goto build
+call :build
 grunt
+
 
 :build
 cp -R src/* build

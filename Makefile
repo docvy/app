@@ -1,5 +1,4 @@
-releases:
-	make build
+releases: build
 	grunt
 
 
@@ -28,5 +27,3 @@ src/viewer:
 src/server:
 	ln -sf "$$(dirname $$PWD)/docvy-server" $$PWD/$@
 
-
-.PHONY: src/viewer src/server

@@ -9,5 +9,6 @@ deploy:
   file: releases/*
   on:
     repo: GochoMugo/docvy-app
+    branch: master
 after_deploy:
   - ls releases/*

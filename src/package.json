@@ -5,6 +5,7 @@
   "window": {
     "toolbar": false
   },
+  "single-instance": false,
   "dependencies": {
     "express": "latest"
   }
