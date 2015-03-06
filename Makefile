@@ -1,5 +1,9 @@
-releases: build
+releases: pre-build build
 	grunt
+
+
+pre-build:
+	mkdir -p build
 
 
 build: build/server build/viewer

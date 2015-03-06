@@ -9,8 +9,13 @@ IF NOT "%1"=="" (
 GOTO :EOF
 
 :releases
+call :pre_build
 call :build
 grunt
+
+
+:pre_build
+mkdir build
 
 
 :build
