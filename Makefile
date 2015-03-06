@@ -18,7 +18,8 @@ build/server:
 
 build/viewer:
 	npm install GochoMugo/docvy-viewer#develop
-	mv node_modules/docvy-viewer $@
+	cd node_modules/docvy-viewer && npm install && grunt dist
+	mv node_modules/docvy-viewer/dist $@
 
 
 src: src/viewer src/server
