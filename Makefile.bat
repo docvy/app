@@ -23,12 +23,12 @@ cd ..
 
 
 :build_server
-npm install docvy-server
+npm install GochoMugo/docvy-server#develop
 mv node_modules/docvy-server build/server
 
 
 :build_viewer
-npm install docvy-viewer
+npm install GochoMugo/docvy-viewer#develop
 mv node_modules/docvy-viewer build/viewer
 
 
