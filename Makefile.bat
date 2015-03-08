@@ -1,3 +1,7 @@
+REM This batch script is an effort at porting the Unix Makefile for
+REM Windows. Therefore, it may not be updated as frequent as the Unix
+REM Makefile. (Please consider helping us keeping it up to date)
+
 @ECHO OFF
 
 :args
