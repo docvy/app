@@ -1,7 +1,11 @@
 {
+  "platforms": ["win32", "win64", "osx32", "osx64", "linux32",
+    "linux64"],
   "dependencies": {
     "grunt": "latest",
     "grunt-contrib-jshint": "latest",
-    "grunt-node-webkit-builder": "latest"
+    "grunt-node-webkit-builder": "latest",
+    "jade": "latest",
+    "mkdirp": "latest"
   }
 }

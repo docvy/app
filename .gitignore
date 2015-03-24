@@ -10,3 +10,6 @@ cache/
 
 # npm-installed modules
 node_modules/
+
+# symlink to locally generated metadata
+src/meta

@@ -1,12 +1,13 @@
 {
-  "name": "The-Docvy-App",
+  "name": "docvy-app",
   "version": "0.0.0",
-  "main": "bootstrap.html",
+  "main": "bootstrap/bootstrap.html",
   "window": {
-    "toolbar": false
+    "toolbar": true
   },
   "single-instance": false,
   "dependencies": {
+    "commander": "latest",
     "express": "latest"
   }
 }

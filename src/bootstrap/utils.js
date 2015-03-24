@@ -5,7 +5,6 @@
 */
 
 
-(function() {
 "use strict";
 
 
@@ -60,6 +59,3 @@ function getPath(_path) {
   if (fs.existsSync(_path)) { return _path; }
   return null;
 }
-
-
-})();

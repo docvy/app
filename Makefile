@@ -3,6 +3,7 @@ releases: pre-build build
 
 
 pre-build:
+	pip install -r ci-requirements.txt
 	mkdir -p build
 
 
@@ -31,4 +32,8 @@ src/viewer:
 
 src/server:
 	ln -sf "$$(dirname $$PWD)/docvy-server" $$PWD/$@
+
+
+src/meta:
+	ln -sf "$$PWD/build/meta" $$PWD/$@
 

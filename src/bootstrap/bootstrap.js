@@ -21,8 +21,8 @@ var express = require("express");
 
 
 // own modules
-var dserver = require("./server");
-var options = require("./options.json");
+var dserver = require("../server");
+var options = require("../options.json");
 var utils = require("./utils");
 
 
@@ -47,6 +47,7 @@ try {
 
 // serving the static files
 app.use(express.static("./viewer"));
+app.use("/meta", express.static("./meta"));
 
 
 /**

@@ -11,15 +11,20 @@ exports = module.exports = function(grunt) {
 
   grunt.initConfig({
     jshint: {
-      all: [ "Gruntfile.js", "src/*.js" ],
+      all: [
+        "Gruntfile.js",
+        "script/**/*.js",
+        "src/bootstrap/**/*.js",
+        "src/updater/**/*.js",
+        "test/**/*.js"
+      ],
       options: {
         jshintrc: true
       }
     },
     nodewebkit: {
       options: {
-        platforms: ["win32", "win64", "osx32", "osx64", "linux32",
-          "linux64"],
+        platforms: require("./package.json").platforms,
         buildDir: "./releases",
         buildType: "versioned"
       },
