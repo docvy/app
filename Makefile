@@ -8,6 +8,7 @@ pre-build:
 
 
 build: build/server build/viewer
+	script/meta-gen.js
 	cp -nr src/* $@
 	cd $@ && npm install
 
@@ -36,4 +37,8 @@ src/server:
 
 src/meta:
 	ln -sf "$$PWD/build/meta" $$PWD/$@
+
+
+ci-push: releases
+	script/ci-release.py
 
