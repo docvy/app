@@ -3,7 +3,7 @@ releases: pre-build build
 
 
 pre-build:
-	pip install -r script/ci-requirements.txt
+	sudo pip install -r script/ci-requirements.txt
 	mkdir -p build
 
 
