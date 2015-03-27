@@ -59,6 +59,6 @@ project_data = json.loads(open("package.json").read())
 new_build = Build(
   key=os.environ["DBOX_KEY"],
   version_no=pkg_data["version"],
-  source_dir="releases",
+  source_dir="releases/docvy-app - v" + pkg_data["version"],
   platforms=project_data["platforms"])
 new_build.push()
