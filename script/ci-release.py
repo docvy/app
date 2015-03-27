@@ -57,7 +57,7 @@ class Build:
 pkg_data = json.loads(open("src/package.json").read())
 project_data = json.loads(open("package.json").read())
 new_build = Build(
-  key=os.environ["DBOX_KEY"]
+  key=os.environ["DBOX_KEY"],
   version_no=pkg_data["version"],
   source_dir="releases",
   platforms=project_data["platforms"])
