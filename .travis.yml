@@ -5,7 +5,7 @@ before_install:
 - npm install -g grunt-cli
 - gem install sass
 script: make releases
-after_script: make ci-push
+after_success: make ci-push
 deploy:
   provider: releases
   api_key:

@@ -44,8 +44,10 @@ metadata.version = packageJson.version;
 metadata.description = packageJson.description;
 metadata.homepage = packageJson.homepage;
 metadata.components = {
-  "docvy-cache": getComponentPkgJson("server/node_modules/docvy-cache").version,
-  "docvy-plugin-installer": getComponentPkgJson("server/node_modules/docvy-plugin-installer").version,
+  "docvy-cache": getComponentPkgJson("" +
+    "server/node_modules/docvy-cache").version,
+  "docvy-plugin-installer": getComponentPkgJson("" +
+    "server/node_modules/docvy-plugin-installer").version,
   "docvy-server": getComponentPkgJson("server").version,
   "docvy-viewer": getComponentPkgJson("viewer").version
 };
