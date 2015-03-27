@@ -30,10 +30,10 @@ class Build:
 
   def paths(self):
     paths = {}
+    name = "docvy-app-v" + self.__version_no + ".nw"
     for platform in self.__platforms:
-      src = os.path.join(self.__source_dir, platform, "docvy-app")
-      dest = os.path.join("/docvy-app", str(self.__build_no),
-        "docvy-app-v" + self.__version_no + ".nw")
+      src = os.path.join(self.__source_dir, platform, "docvy-app", name)
+      dest = os.path.join("/docvy-app", str(self.__build_no), name)
       paths[src] = dest
     return paths
 
