@@ -5,7 +5,6 @@
     "grunt": "latest",
     "grunt-contrib-jshint": "latest",
     "grunt-node-webkit-builder": "latest",
-    "jade": "latest",
     "mkdirp": "latest"
   }
 }

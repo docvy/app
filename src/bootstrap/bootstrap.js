@@ -54,6 +54,7 @@ app.use("/meta", express.static("./meta"));
 * Navigate to Home
 */
 function goHome(){
+  logger.info("opening current directory");
   setTimeout(function() {
     window.location = "http://localhost:" + options.viewer_port;
   }, 1000);
@@ -64,6 +65,7 @@ function goHome(){
 * Navigate to read a file
 */
 function readFile(_path) {
+  logger.info("opening file at: " + _path);
   setTimeout(function() {
     var _url = "http://localhost:" + options.viewer_port +
       "/#/read" + url.format({ query: { filepath: _path } });
