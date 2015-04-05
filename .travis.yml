@@ -19,3 +19,10 @@ after_deploy:
 env:
   global:
     secure: NP2B8vmtk6j4iZo74DgiE5ATVXA9B4GPASMuCXPc8zrWforYK5qSKQxmFz+08kH6fh+eLi0H7y1nHPQ7A7JGqUooqn7pJ0IAFfHzdXCs7buLbAYYCGsqQzutcakTfHlxwIO3jaFT7IIcW6TUlWZFHh8EEEPO5Pz3RlPrpDRSJug=
+notifications:
+  webhooks:
+    urls:
+      - https://webhooks.gitter.im/e/dd665e7287b25be6a0a8
+    on_success: always
+    on_failure: always
+    on_start: false
