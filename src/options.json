@@ -1,4 +1,3 @@
 {
-  "server_port": 9432,
-  "viewer_port": 9999
+  "server_port": 9432
 }

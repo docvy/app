@@ -9,7 +9,6 @@
   },
   "single-instance": false,
   "dependencies": {
-    "commander": "latest",
-    "express": "latest"
+    "commander": "latest"
   }
 }

@@ -11,13 +11,8 @@
 
 
 // built-in modules
-var http = require("http");
 var url = require("url");
 var gui = require('nw.gui');
-
-
-// npm-installed modules
-var express = require("express");
 
 
 // own modules
@@ -27,27 +22,8 @@ var utils = require("./utils");
 
 
 // module variables
-var app = express();
-var server = http.Server(app);
 var logger = new utils.Logger($("#log"));
-
-
-/**
-* We shall try to start the server. Any error that occurs is ignored
-* as the user may have already started a docvy-server.
-*/
-try {
-  dserver.start({ port: options.server_port }, function() {
-    logger.info("server started");
-  });
-} catch (serverError) {
-  logger.error("server failed to start");
-}
-
-
-// serving the static files
-app.use(express.static("./viewer"));
-app.use("/meta", express.static("./meta"));
+var baseurl = "../viewer/index.html";
 
 
 /**
@@ -56,7 +32,7 @@ app.use("/meta", express.static("./meta"));
 function goHome(){
   logger.info("opening current directory");
   setTimeout(function() {
-    window.location = "http://localhost:" + options.viewer_port;
+    window.location = baseurl;
   }, 1000);
 }
 
@@ -67,8 +43,8 @@ function goHome(){
 function readFile(_path) {
   logger.info("opening file at: " + _path);
   setTimeout(function() {
-    var _url = "http://localhost:" + options.viewer_port +
-      "/#/read" + url.format({ query: { filepath: _path } });
+    var _url = baseurl + "#/read" +
+      url.format({ query: { filepath: _path } });
     window.location = _url;
   }, 1000);
 }
@@ -86,16 +62,18 @@ function showView() {
 
 
 /**
-* We now start the viewer's server. Error is also ignored incase a
-* viewer has already been started
+* We shall try to start the server. Any error that occurs is ignored
+* as the user may have already started a docvy-server.
 */
-server.listen(options.viewer_port, function() {
-  logger.info("viewer ready");
-  showView();
-}).on("error", function() {
-  logger.error("viewer failed to start");
-  showView();
-});
+try {
+  dserver.start({ port: options.server_port }, function() {
+    logger.info("server started");
+    // Show the 1st Page/view
+    showView();
+  });
+} catch (serverError) {
+  logger.error("server failed to start");
+}
 
 
 })();
