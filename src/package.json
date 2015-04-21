@@ -2,7 +2,7 @@
   "name": "docvy-app",
   "version": "0.0.0",
   "description": "A document viewer",
-  "homepage": "https://github.com/GochoMugo/docvy-app/wiki/Home",
+  "homepage": "https://github.com/docvy/app/wiki/Home",
   "main": "bootstrap/bootstrap.html",
   "window": {
     "toolbar": true

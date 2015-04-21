@@ -14,25 +14,25 @@ build: build/server build/viewer
 
 
 build/server:
-	npm install GochoMugo/docvy-server#develop
-	mv node_modules/docvy-server $@
+	npm install docvy/server#develop
+	mv node_modules/server $@
 
 
 build/viewer:
-	npm install GochoMugo/docvy-viewer#develop
-	cd node_modules/docvy-viewer && npm install && grunt dist
-	mv node_modules/docvy-viewer/dist $@
+	npm install docvy/viewer#develop
+	cd node_modules/viewer && npm install && grunt dist
+	mv node_modules/viewer/dist $@
 
 
 src: src/viewer src/server
 
 
 src/viewer:
-	ln -sf "$$(dirname $$PWD)/docvy-viewer/dist" $$PWD/$@
+	ln -sf "$$(dirname $$PWD)/viewer/dist" $$PWD/$@
 
 
 src/server:
-	ln -sf "$$(dirname $$PWD)/docvy-server" $$PWD/$@
+	ln -sf "$$(dirname $$PWD)/server" $$PWD/$@
 
 
 src/meta:
