@@ -24,7 +24,8 @@ build/viewer:
 	mv node_modules/viewer/dist $@
 
 
-src: src/viewer src/server
+links: src
+src: src/viewer src/server src/meta
 
 
 src/viewer:
@@ -42,3 +43,5 @@ src/meta:
 ci-push: releases
 	script/ci-release.py
 
+
+.PHONY: links ci-push
