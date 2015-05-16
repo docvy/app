@@ -12,7 +12,7 @@
 
 // built-in modules
 var url = require("url");
-var gui = require('nw.gui');
+var gui = require("nw.gui");
 
 
 // own modules

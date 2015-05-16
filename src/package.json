@@ -8,7 +8,5 @@
     "toolbar": true
   },
   "single-instance": false,
-  "dependencies": {
-    "commander": "latest"
-  }
+  "dependencies": {}
 }
